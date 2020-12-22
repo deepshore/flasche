@@ -1,13 +1,14 @@
 from setuptools import setup, find_packages
 import pathlib
 
-here = pathlib.Path(__file__).parent.resolve()
 
+here = pathlib.Path(__file__).parent.resolve()
 long_description = (here / 'README.md').read_text(encoding='utf-8')
+
 
 setup(
     name='flasche',
-    version='0.0.0',
+    version='0.0.1',
     description='flasche extends flask by prometheus-flask-exporter and swagger',
     long_description=long_description,
     long_description_content_type='text/markdown',
@@ -24,7 +25,7 @@ setup(
     package_dir={'': 'src'},
     packages=find_packages(where='src'),
     python_requires='>=3.6, <4',
-    install_requires=['click'],
+    install_requires=['flask', 'flask_restx', 'prometheus_flask_exporter'],
     entry_points={
         'console_scripts': [
             'flasche=flasche.cli:main'
