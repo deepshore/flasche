@@ -8,7 +8,7 @@ long_description = (here / 'README.md').read_text(encoding='utf-8')
 
 setup(
     name='flasche',
-    version='0.0.1',
+    version='0.0.3',
     description='flasche extends flask by prometheus-flask-exporter and swagger',
     long_description=long_description,
     long_description_content_type='text/markdown',
@@ -24,6 +24,8 @@ setup(
     keywords='flask, web',
     package_dir={'': 'src'},
     packages=find_packages(where='src'),
+    package_data={'flasche': ['templates/*', 'templates/endpoints/*']},
+    include_package_data=True,
     python_requires='>=3.6, <4',
     install_requires=['flask', 'flask_restx', 'prometheus_flask_exporter'],
     entry_points={

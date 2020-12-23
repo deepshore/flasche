@@ -13,10 +13,10 @@ def main():
 @click.argument('project')
 @click.option('-p', '--port', default=8000)
 def build(project, port):
-    click.echo("build project {p}".format(p=project))
+    click.echo("build project {p}...".format(p=project))
     builder = ProjectBuilder(project, port)
     builder.build()
-    click.echo("done")
+    click.echo("...done")
     click.echo("run the app by \"flasche run {p}\"".format(p=project))
 
 
