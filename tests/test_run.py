@@ -1,4 +1,3 @@
-import os
 from unittest.mock import patch
 
 from flasche.run import ProjectRunner
