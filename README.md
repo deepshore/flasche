@@ -25,4 +25,13 @@ Running the app in a development server is done by:
 ```bash
 flasche run <project>
 ```
-    
+
+## Running tests
+
+Testing goes like this:
+
+```bash
+pytest tests
+```
+
+Before you can run the tests you have to instal flasche.
