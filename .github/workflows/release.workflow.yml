@@ -27,8 +27,4 @@ jobs:
         TWINE_PASSWORD: ${{ secrets.PYPI_PASSWORD }}
       run: |
         python setup.py sdist bdist_wheel
-<<<<<<< Updated upstream
-        python -m twine upload dist/*
-=======
         twine upload dist/*
->>>>>>> Stashed changes
