@@ -1,8 +1,9 @@
+# This workflow will test a Python Package using flake8 and pytest
+
 name: Test Workflow 
 
 on:
   push:
-    branches-ignore: [ main ]
   pull_request:
 
 jobs:
